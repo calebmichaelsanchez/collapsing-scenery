@@ -1,0 +1,40 @@
+.video-cont {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	@include ghost;
+	background: url('../images/main/bg.jpg') center center no-repeat;
+	background-size: cover;
+}
+#big-video-wrap {
+	position: absolute;
+}
+[class^="vjs-"] {
+	display: none;
+}
+.vjs-tech {
+	display: block;
+}
+.main-social {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 40px;
+	z-index: 10;
+	ul {
+		text-align: center;
+	}
+	li {
+		display: inline-block;
+		padding-right: 34px;
+		&:last-of-type {
+			padding-right: 0;
+		}
+	}
+	a {
+		display: block;
+	}
+	svg {
+		fill: $white;
+	}
+}

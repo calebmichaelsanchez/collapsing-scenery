@@ -1,0 +1,33 @@
+.lyric {
+	position: relative;
+	min-height: 470px;
+	max-height: 470px;
+	height: 470px;
+	overflow: hidden;
+	background: url('../images/main/bg.jpg') center center no-repeat;
+	background-size: cover;
+	
+	.lyric-container {
+		position: relative;
+		width: 80%;
+		height: 85%;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+	.lyrics-inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		transition: .4s;
+	}
+	.lyrics-aggregator {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 15%;
+		width: 100%;
+		padding: 0 35px;
+	}
+
+}

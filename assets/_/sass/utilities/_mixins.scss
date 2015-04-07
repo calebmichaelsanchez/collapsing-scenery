@@ -1,0 +1,72 @@
+@mixin burger($bg-color) {
+	position: relative;
+	width: 35px;
+	height: 1px;
+	background: $bg-color;
+
+	&:after, &:before {
+		position: absolute;
+		background: $bg-color;
+	    content: "";
+	    display: block;
+	    height: 1px;
+	    transition: all 0.3s ease 0s;
+	    width: 35px;
+	    z-index: 1;
+	}
+}
+@mixin button {
+	display: block;
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
+	max-width: 250px;
+	min-width: 250px;
+	padding: .75rem 0;
+	border: 1px solid $text-color;
+	color: $text-color;
+	font-family: $ff-primary;
+	font-size: em(22px);
+	font-weight: $fw-bold;
+	letter-spacing: 1px;
+}
+
+@mixin ghost {
+	text-align: center;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		margin-right: -0.25em;
+	}
+	> .ghosted {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 98%;
+		z-index: 10;
+	}
+}
+
+$breakpoints: (
+	'x-small'	: ( min-width: 640px ),
+  'small'  	: ( min-width: 767px )
+);
+
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+ 
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}

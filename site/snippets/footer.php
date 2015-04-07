@@ -10,5 +10,27 @@
 
   </footer>
 
+
+
+<!-- Big Video JS -->
+<?php echo js('assets/js/libs/jquery.min.js') ?>
+<?php echo js('assets/js/libs/jquery-ui.min.js') ?>
+<?php echo js('assets/js/libs/EventEmitter.min.js') ?>
+<?php echo js('assets/js/libs/eventie.js') ?>
+<?php echo js('assets/js/libs/imagesloaded.js') ?>
+<?php echo js('assets/js/libs/video.js') ?>
+<?php echo js('assets/js/libs/BigVideo.js') ?>
+
+<!-- Bootstrap carousel -->
+<?php echo js('assets/js/libs/bootstrap.min.js') ?>
+
+<!-- Smooth Scroll -->
+<?php echo js('assets/js/libs/jquery.smooth-scroll.min.js') ?>
+
+<!-- custom js -->
+<?php echo js('assets/js/app.js') ?>
+<script>
+</script>
+
 </body>
 </html>

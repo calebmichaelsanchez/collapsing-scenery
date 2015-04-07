@@ -1,17 +1,13 @@
-Title: Kirby Starterkit
+Title: Collapsing Scenery
 
 ----
 
-Author: Bastian Allgeier GmbH
+Description: MUSIC // ART 
 
 ----
 
-Description: This is Kirby's Starterkit.
+Keywords: collapsing scenery, music, art, la, los angeles
 
 ----
 
-Keywords: Kirby, CMS, file-based
-
-----
-
-Copyright: © 2009-(date: Year) (link: http://getkirby.com text: Kirby)
+Copyright: © 2015-(date: Year)
