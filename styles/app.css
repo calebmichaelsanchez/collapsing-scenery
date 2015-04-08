@@ -1,0 +1,63 @@
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+}
+img {
+	max-width: 100%;
+}
+a {
+	text-decoration: none;
+	-webkit-transition: 0.4s ease;
+	-o-transition: 0.4s ease;
+	transition: 0.4s ease;
+}
+.main {
+	width: 100%;
+	height: 100%;
+	padding: 1em;
+	text-align: center;
+	min-height: 540px;
+}
+.main:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em;
+}
+article {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	max-width: 98%;
+}
+article > svg {
+	max-width: 360px;
+}
+article ul {
+	text-align: center;
+	margin: 75px 0 0;
+	padding: 0;
+}
+article li {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 36px 0 0;
+}
+article li:last-of-type {
+	padding: 0;
+}
+li svg path {
+	-webkit-transition: 0.4s ease;
+	-o-transition: 0.4s ease;
+	transition: 0.4s ease;
+}
+li svg:hover path {
+	fill: #fff;
+}
