@@ -19,7 +19,7 @@
             'hideReplies': false,
             'dateFormat': '%b/%d/%Y',
             'template': '{{date}} - {{tweet}}',
-            'apiPath' : 'api/tweet.php',
+            'apiPath' : '/collapsingscenery/assets/js/libs/api/tweet.php',
             'loadingText': 'Loading...'
         }, options);
 
