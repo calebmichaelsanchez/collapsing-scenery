@@ -19,7 +19,7 @@
 <?php echo js('assets/js/libs/eventie.js') ?>
 <?php echo js('assets/js/libs/imagesloaded.js') ?>
 <?php echo js('assets/js/libs/video.js') ?>
-<?php echo js('assets/js/libs/BigVideo.js') ?>
+<?php echo js('assets/js/libs/bigvideo.js') ?>
 <?php echo js('assets/js/libs/instafeed.js') ?>
 
 <!-- Bootstrap carousel -->
