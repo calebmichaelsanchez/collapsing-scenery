@@ -10,6 +10,7 @@
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 
   <?php echo js('assets/js/libs/modernizr.js') ?>
+  
 
   <?php echo css('assets/css/libs/bigvideo.css') ?>
   <?php echo css('assets/css/app.css') ?>

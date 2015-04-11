@@ -26,6 +26,10 @@ a {
 	@include button;
 }
 // Typography
+em {
+	font-style: normal;
+	text-decoration: underline;
+}
 p {
 	font-family: $font-family--secondary;
 	font-size: em(18px);

@@ -20,6 +20,7 @@
 <?php echo js('assets/js/libs/imagesloaded.js') ?>
 <?php echo js('assets/js/libs/video.js') ?>
 <?php echo js('assets/js/libs/BigVideo.js') ?>
+<?php echo js('assets/js/libs/instafeed.js') ?>
 
 <!-- Bootstrap carousel -->
 <?php echo js('assets/js/libs/bootstrap.min.js') ?>
@@ -27,8 +28,11 @@
 <!-- Smooth Scroll -->
 <?php echo js('assets/js/libs/jquery.smooth-scroll.min.js') ?>
 
+<!-- Tweetie -->
+<?php echo js('assets/js/libs/tweetie.js') ?>
+
 <!-- custom js -->
-<?php echo js('assets/js/app.js') ?>
+<?php echo js('assets/_/js/app.js') ?>
 <script>
 </script>
 

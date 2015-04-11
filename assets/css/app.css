@@ -364,6 +364,10 @@ a {
   font-weight: 700;
   letter-spacing: 1px; }
 
+em {
+  font-style: normal;
+  text-decoration: underline; }
+
 p {
   font-family: 'Cutive Mono', 'Courier', serif;
   font-size: 1.125rem;

@@ -36,35 +36,63 @@ classToFirstElement('.carousel-inner', 'active');
 
 var lyricsAggregator = function() {
 	var lyricsContainer = $('.lyrics-inner');
-	var lyricsHeight = lyricsContainer.height();
-	var positivePositionCalc = 0;
-	var negativePositionCalc = 0;
+	var marginDown = 0;
 	var down = $('.down');
-	var up 	= $('.up');
+	var counter = 0;
 
 	$(down).click(function(e){
 		e.preventDefault();
-		if (positivePositionCalc >= lyricsHeight * .75) {
-			return;
+
+		if (counter >= 3) {
+			counter = 0;
+			marginDown = 0;
+		} else {
+			marginDown -= 100;
+			counter += 1;
+			console.log(counter);
+			console.log(marginDown);
 		}
-		positivePositionCalc += (lyricsHeight / 4);
 		lyricsContainer.css({
-			top: -positivePositionCalc + 'px'
+			marginTop: marginDown + '%'
 		});
-		console.log(positivePositionCalc);
 	});
-	$(up).click(function(e){
-		e.preventDefault();
-		if (negativePositionCalc >= lyricsHeight * .75) {
-			console.log(negativePositionCalc);
-			return;
-		}
-		negativePositionCalc += (lyricsHeight / 4);
-		lyricsContainer.css({
-			top: negativePositionCalc + 'px'
-		});
-		console.log(negativePpositionCalc);
-	});
+	// $(up).click(function(e){
+	// 	e.preventDefault();
+	// 	if (parseInt(marginUp) > 0) {
+	// 		return;
+	// 	} else {
+	// 		marginDown += 100;
+	// 		lyricsContainer.css({
+	// 			marginTop: marginUp + '%'
+	// 		});
+	// 		console.log(marginUp);
+	// 	}
+	//});
 
 }
 lyricsAggregator();
+
+// Instagram Function using instafeed.js
+
+var feed = new Instafeed({
+	get: 'user',
+	userId: 'collapsingscenery',
+	clientId: 'ab23588db53b4759a737ffaa59a039c6'
+});
+//feed.run();
+
+var twitterInit = function(){
+	$('.twitter-feed').twittie({
+	    username: 'collapsingscenery',
+	    dateFormat: '%B. %d, %Y',
+	    template: '{{tweet}} <div class="date">- {{date}}</div>',
+	    count: 3
+	});
+}
+twitterInit();
+
+
+
+
+
+
