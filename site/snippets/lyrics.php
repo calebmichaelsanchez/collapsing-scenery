@@ -11,7 +11,7 @@
 				</div>
 			</div>
 			<div class="lyrics-aggregator">
-					<a href="#" class="down">down</a>
+					<a href="#" class="down"><?php include('assets/images/arrow.svg') ?></a>
 					<a href="#" class="up">up </a>
 			</div>
 		</div>

@@ -6,8 +6,16 @@ html, body, ul {
 	margin: 0;
 	color: $white;
 }
+img {
+	max-width: 100%;
+	vertical-align: top;
+}
 ul {
 	list-style: none;
+}
+li {
+	margin: 0;
+	padding: 0;
 }
 hr {
 	display: block;
@@ -55,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.3;
 }
 h1 {
-	font-size: em(44px);
+	font-size: em(38px);
 	text-transform: uppercase;
 	color: $white;
 	font-weight: $fw-bold;
@@ -63,6 +71,7 @@ h1 {
 	text-align: left;
 	padding-left: 35px;
 	padding-bottom: 75px;
+	letter-spacing: .08em;
 }
 h2 {
 	font-size: em(28px);

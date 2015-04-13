@@ -1,3 +1,12 @@
+.lyrics-container {
+	padding-top: 0;
+	h1 {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		border-top: 1px $grey solid;
+		border-bottom: 1px $grey solid;
+	}
+}
 .lyric {
 	position: relative;
 	min-height: 470px;
@@ -27,7 +36,7 @@
 		bottom: 0;
 		height: 15%;
 		width: 100%;
-		padding: 0 35px;
+		padding: 1rem 35px;
 	}
 
 }

@@ -1,0 +1,16 @@
+.ig-container {
+	width: 100%;
+	overflow: hidden;
+}
+#instafeed {
+	text-align: left;
+	width: 430px;
+	margin-left: 0;
+	transition: margin .6s ease;
+	@extend %clearfix;
+	li {
+		max-width: 215px;
+		padding: 0 2px 2px 0;
+		float: left;
+	}
+}

@@ -1,5 +1,5 @@
 html {
-	background-color: $black;
+	//background-color: $black;
 	height: 100%;
 }
 body {
@@ -35,6 +35,8 @@ body {
 section {
 	height: 100%;
 	padding: 2rem 0;
+	//margin: 2rem 0;
+	background: $black;
 	@extend %clearfix;
 	article {
 		// max-width: 100%;

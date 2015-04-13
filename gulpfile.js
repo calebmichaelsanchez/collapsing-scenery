@@ -78,5 +78,5 @@ gulp.task('default', ['sass', 'browser-sync', 'compress:js'], function(){
 	gulp.watch("./site/snippets/*.php").on('change', browserSync.reload);
 	gulp.watch("./content/**/*.txt").on('change', browserSync.reload);
 	gulp.watch( "assets/_/sass/**/*.scss", ['sass']);
-	gulp.watch("assets/_/js/**/*.js", ['compress:js', browserSync.reload]);
+	gulp.watch("assets/_/js/app.js", ['compress:js', browserSync.reload]);
 })
