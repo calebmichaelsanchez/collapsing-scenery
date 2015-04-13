@@ -577,8 +577,8 @@ header {
   .lyrics-container h1 {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    border-top: 1px #797e83 solid;
-    border-bottom: 1px #797e83 solid; }
+    border-top: 1px #404040 solid;
+    border-bottom: 1px #404040 solid; }
 
 .lyric {
   position: relative;
@@ -612,10 +612,10 @@ header {
   padding: 2rem 0; }
 
 .twitter-feed li {
-  border-top: 1px solid #797e83;
-  padding: 25px 35px; }
+  border-top: 1px solid #404040;
+  padding: 30px 35px; }
   .twitter-feed li:last-of-type {
-    border-bottom: 1px solid #797e83; }
+    border-bottom: 1px solid #404040; }
   .twitter-feed li a {
     color: #fff; }
 
@@ -648,9 +648,32 @@ header {
 
 footer {
   width: 100%;
-  padding: 2em 0;
+  padding: 0 35px 2rem;
   text-align: center;
-  color: #3a9fe1; }
+  color: #404040;
+  background-color: #000000; }
+
+.footer-social {
+  width: 100%;
+  z-index: 10;
+  padding-bottom: 30px; }
+  .footer-social ul {
+    text-align: center; }
+  .footer-social li {
+    display: inline-block;
+    padding-right: 33px; }
+    .footer-social li:last-of-type {
+      padding-right: 0; }
+  .footer-social a {
+    display: block; }
+  .footer-social svg {
+    fill: #404040; }
+
+.copyright span {
+  font-family: 'Cutive Mono', 'Courier', serif;
+  font-size: 1.125rem;
+  letter-spacing: -0.04em;
+  display: block; }
 
 .carousel {
   position: relative; }
