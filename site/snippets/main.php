@@ -1,4 +1,4 @@
-<div class="video-cont" site-video="/collapsingscenery/assets/video/cs-metacops.mp4">
+<div class="video-cont" data-video="/collapsingscenery/assets/video/cs-metacops.mp4">
 	<div class="main-logo ghosted">
 		<?php include('assets/images/main/logo.svg') ?>
 	</div>
