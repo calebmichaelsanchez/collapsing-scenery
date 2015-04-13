@@ -1,0 +1,22 @@
+.twitter-feed {
+	padding: 2rem 35px;
+}
+.twitter-feed li {
+	border-top: 1px solid $grey;
+	&:last-of-type {
+		border-bottom: 1px solid $grey;
+	}
+}
+.twitter-feed li > div {
+	font-family: $ff-secondary;
+	letter-spacing: -0.04em;
+	margin-bottom: 25px;
+}
+.date {
+	font-size: em(30px);
+	line-height: em(36px);
+}
+.tweet {
+	font-size: em(18px);
+	line-height: em(28px);
+}

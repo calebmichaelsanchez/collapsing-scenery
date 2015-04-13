@@ -608,6 +608,27 @@ header {
     width: 100%;
     padding: 1rem 35px; }
 
+.twitter-feed {
+  padding: 2rem 35px; }
+
+.twitter-feed li {
+  border-top: 1px solid #797e83; }
+  .twitter-feed li:last-of-type {
+    border-bottom: 1px solid #797e83; }
+
+.twitter-feed li > div {
+  font-family: 'Cutive Mono', 'Courier', serif;
+  letter-spacing: -0.04em;
+  margin-bottom: 25px; }
+
+.date {
+  font-size: 1.875rem;
+  line-height: 2.25rem; }
+
+.tweet {
+  font-size: 1.125rem;
+  line-height: 1.75rem; }
+
 .ig-container {
   width: 100%;
   overflow: hidden; }
