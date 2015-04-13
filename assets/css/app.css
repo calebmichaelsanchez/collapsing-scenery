@@ -609,21 +609,24 @@ header {
     padding: 1rem 35px; }
 
 .twitter-feed {
-  padding: 2rem 35px; }
+  padding: 2rem 0; }
 
 .twitter-feed li {
-  border-top: 1px solid #797e83; }
+  border-top: 1px solid #797e83;
+  padding: 25px 35px; }
   .twitter-feed li:last-of-type {
     border-bottom: 1px solid #797e83; }
+  .twitter-feed li a {
+    color: #fff; }
 
 .twitter-feed li > div {
   font-family: 'Cutive Mono', 'Courier', serif;
-  letter-spacing: -0.04em;
-  margin-bottom: 25px; }
+  letter-spacing: -0.04em; }
 
 .date {
   font-size: 1.875rem;
-  line-height: 2.25rem; }
+  line-height: 2.25rem;
+  margin-bottom: 25px; }
 
 .tweet {
   font-size: 1.125rem;
