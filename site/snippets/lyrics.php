@@ -1,8 +1,14 @@
-<section class="lyrics-container">
+<section id="lyrics" class="lyrics-container">
 	<article class="ghosted">
 		<div class="title">
 			<h1><?php echo $data->title()->html() ?></h1>
 		</div>
+		<!--	<ul class="tracks">
+				<li><a href="#">Lorem Track Title</a></li>
+				<li><a href="#">Lorem Track Title</a></li>
+				<li><a href="#">Lorem Track Title</a></li>
+				<li><a href="#">Lorem Track Title</a></li>
+			</ul>-->
 		<div class="lyric">
 			<div class="lyric-container">
 				<div class="lyrics-inner">
@@ -12,7 +18,7 @@
 			</div>
 			<div class="lyrics-aggregator">
 					<a href="#" class="down"><?php include('assets/images/arrow.svg') ?></a>
-					<a href="#" class="up">up </a>
+					<!-- <a href="#" class="up">up </a> -->
 			</div>
 		</div>
 	</article>

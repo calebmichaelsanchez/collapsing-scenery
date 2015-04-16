@@ -1,3 +1,3 @@
-<section class="twitter-feed">
+<section id="news" class="twitter-feed">
 	
 </section>

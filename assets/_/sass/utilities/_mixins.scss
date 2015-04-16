@@ -1,18 +1,39 @@
 @mixin burger($bg-color) {
 	position: relative;
-	width: 35px;
+	display: block;
+	width: 34px;
 	height: 1px;
 	background: $bg-color;
+	top: 50%;
+	margin: -0.5px auto 0;
 
 	&:after, &:before {
+		content: "";
 		position: absolute;
 		background: $bg-color;
-	    content: "";
-	    display: block;
-	    height: 1px;
-	    transition: all 0.3s ease 0s;
-	    width: 35px;
-	    z-index: 1;
+    display: block;
+    height: 1px;
+    transition: all 0.5s ease 0s;
+    width: 34px;
+    z-index: 1;
+	}
+	&:after {
+		top: 13px;
+	}
+	&:before {
+		top: -13px;
+	}
+	.open & {
+		background: transparent;
+		&:after, &:before {
+			top: 0;
+		}
+		&:after {
+			transform: rotate(45deg);
+		}
+		&:before {
+			transform: rotate(-45deg);
+		}
 	}
 }
 @mixin button {
@@ -46,13 +67,14 @@
 		display: inline-block;
 		vertical-align: middle;
 		width: 98%;
-		z-index: 10;
+		z-index: 5;
 	}
 }
 
 $breakpoints: (
-	'x-small'	: ( min-width: 640px ),
-  'small'  	: ( min-width: 767px )
+
+	'x-small'	: ( min-width: 321px ),
+  'small'  	: ( min-width: 640px )
 );
 
 @mixin respond-to($name) {

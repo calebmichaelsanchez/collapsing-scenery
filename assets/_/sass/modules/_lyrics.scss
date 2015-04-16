@@ -1,5 +1,6 @@
 .lyrics-container {
 	padding-top: 0;
+	padding-bottom: 0;
 	h1 {
 		padding-top: 2rem;
 		padding-bottom: 2rem;
@@ -19,7 +20,9 @@
 	.lyric-container {
 		position: relative;
 		width: 80%;
+		max-width: 580px;
 		height: 85%;
+		max-height: 645px;
 		overflow: hidden;
 		margin: 0 auto;
 	}
@@ -31,12 +34,45 @@
 		transition: .4s;
 	}
 	.lyrics-aggregator {
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		height: 15%;
-		width: 100%;
-		padding: 1rem 35px;
+		position: relative;
+		width: 80%;
+		padding: 1rem 0;
+		margin: 0 auto;
 	}
 
+}
+@include respond-to('small') {
+	.lyrics-container, .lyrics-container article {
+		height: 100%;
+		min-height: 850px;
+	}
+	.title {
+		width: (385 / $maxWidth) * 100%;
+		float: left;
+		h1 {
+			text-align: center;
+			padding-top: 80px;
+			padding-left: 0;
+			border: none;
+		}
+	}
+	.lyric {
+		width: (1085 / $maxWidth) * 100%;
+		margin-left: auto;
+		height: 100%;
+		min-height: none;
+		max-height: none;
+		border-left: 1px solid $grey;
+		.lyric-container {
+			margin-top: 80px;
+			margin-left: (236 / $maxWidth) * 100%;
+		}
+		.lyrics-inner {
+			padding-right: 1rem;
+		}
+		.lyrics-aggregator {
+			padding-top: 2rem;
+			margin-left: (236 / $maxWidth) * 100%;
+		}
+	}
 }

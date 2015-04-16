@@ -1,7 +1,32 @@
 .video-container {
-	padding: 2rem 0;
 	@include ghost;
 }
-h6 {
-	//margin-top: 90px;
+
+@include respond-to('small') {
+	.video-container {
+		padding: 6rem 0;
+		h1 {
+			width: (318 / $maxWidth) * 100%;
+			float: left;
+			padding-left: 0;
+			text-align: center;
+		}
+	}
+	.carousel {
+		width: (1030 / $maxWidth) * 100%;
+		margin-left: auto;
+		margin-right: (122 / $maxWidth) * 100%;
+		h6 {
+			margin-left: 0;
+			margin-top: 60px;
+		}
+		&-indicators {
+			padding: 0;
+			margin-left: 0;
+			margin-bottom: 0;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+	}
 }

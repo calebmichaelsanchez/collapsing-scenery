@@ -17,7 +17,3 @@
 
 </head>
 <body>
-
-  <header>
-    <?php snippet('menu') ?>
-  </header>

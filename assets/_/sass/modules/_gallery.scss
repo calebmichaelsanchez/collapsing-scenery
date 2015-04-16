@@ -1,6 +1,32 @@
 .ig-container {
 	width: 100%;
+	position: relative;
 	overflow: hidden;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	@include respond-to('small') {
+		width: (1218 / $maxWidth) * 100%;
+		max-width: 1218px;
+		margin: 0 auto;
+	}
+}
+.ig-next {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	background: rgba($black, .75);
+	z-index: 8;
+	padding: 0 20px;
+	svg {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.touch & {
+		display: none;
+	}
 }
 #instafeed {
 	text-align: left;
@@ -9,8 +35,47 @@
 	transition: margin .6s ease;
 	@extend %clearfix;
 	li {
-		max-width: 215px;
-		padding: 0 2px 2px 0;
+		position: relative;
+		width: 300px;
+		padding: 0 2px 0 0;
 		float: left;
+		@include respond-to('small') {
+			width: 406px;
+		}
 	}
+}
+.info {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	transition: .5s;
+	.no-touch & {
+		opacity: 0;
+		background: rgba(#000, .75);
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.touch & {
+		position: relative;
+		background: #222;
+		height: auto;
+		min-height: 200px;
+	}
+	svg {
+		display: block;
+		margin-left: auto;
+	}
+}
+.caption {
+	display: block;
+	position: absolute;
+	left: 10px;
+	bottom: 20px;
+	font-size: em(18px);
+	line-height: 1.45;
 }
