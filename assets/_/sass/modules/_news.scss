@@ -1,11 +1,14 @@
 .twitter-feed {
 	padding: 2rem 0;
+	width: (1218 / $maxWidth) * 100%;
+	max-width: 1218px;
+	margin: 0 auto;
 }
 .twitter-feed li {
-	border-top: 1px solid $grey;
+	border-top: $border;
 	padding: 30px 35px;
 	&:last-of-type {
-		border-bottom: 1px solid $grey;
+		border-bottom: $border;
 	}
 	a {
 		color: $white;
@@ -23,4 +26,14 @@
 .tweet {
 	font-size: em(18px);
 	line-height: em(28px);
+}
+@include respond-to('medium') {
+	.date {
+		display: inline-block;
+		width: (260 / $maxWidth) * 100%;
+	}
+	.tweet {
+		display: inline-block;
+		width: (1210 / $maxWidth) * 100%;
+	}
 }

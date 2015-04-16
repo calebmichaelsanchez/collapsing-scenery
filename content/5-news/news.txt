@@ -1,7 +1,3 @@
-Title: Events
-
-----
-
-Nav-subtitle: Upcoming Events
+Title: News
 
 ----

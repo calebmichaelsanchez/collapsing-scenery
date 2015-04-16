@@ -613,7 +613,7 @@ section {
     background-color: #fff; }
 
 .nav-toggle {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.85);
@@ -656,7 +656,7 @@ section {
 nav {
   visibility: hidden;
   opacity: 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
@@ -689,12 +689,62 @@ nav {
   .nav-ul li:last-of-type {
     margin-bottom: 0; }
 .nav-ul a {
+  display: block;
+  position: relative;
   font-family: 'Oswald', 'Futura', 'Helvetica', sans-serif;
   text-transform: uppercase;
   font-size: 2.25rem;
   line-height: 1.75rem;
   letter-spacing: .1em;
   color: #fff; }
+
+@media (min-width: 767px) {
+  .no-touch .nav-toggle {
+    display: none; }
+  .no-touch nav {
+    border-top: 1px solid rgba(64, 64, 64, 0.5);
+    border-bottom: 1px solid rgba(64, 64, 64, 0.5);
+    background: #000000;
+    visibility: visible;
+    opacity: 1;
+    position: fixed;
+    top: initial;
+    bottom: 0;
+    height: auto; }
+    .no-touch nav:before {
+      display: none; }
+  .no-touch .nav-ul {
+    text-align: left;
+    padding-left: 125px; }
+    .no-touch .nav-ul.ghosted {
+      display: block;
+      width: 100%; }
+    .no-touch .nav-ul li {
+      display: inline-block;
+      margin-right: 45px;
+      margin-bottom: 0; }
+      .no-touch .nav-ul li:last-of-type {
+        margin-right: 0; }
+    .no-touch .nav-ul a {
+      font-family: 'Cutive Mono', 'Courier', serif;
+      font-size: 1.125rem;
+      text-transform: none;
+      line-height: 6.5625rem;
+      letter-spacing: normal; }
+      .no-touch .nav-ul a:hover:before {
+        opacity: 1; }
+      .no-touch .nav-ul a:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        margin-top: -0.5px;
+        left: 50%;
+        margin-left: -75%;
+        width: 150%;
+        height: 1px;
+        opacity: 0;
+        background-color: #fff;
+        transition: .5s; } }
 
 .video-cont {
   width: 100%;
@@ -804,8 +854,8 @@ nav {
   .lyrics-container h1 {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    border-top: 1px #404040 solid;
-    border-bottom: 1px #404040 solid; }
+    border-top: 1px solid rgba(64, 64, 64, 0.5);
+    border-bottom: 1px solid rgba(64, 64, 64, 0.5); }
 
 .lyric {
   position: relative;
@@ -853,7 +903,7 @@ nav {
     height: 100%;
     min-height: none;
     max-height: none;
-    border-left: 1px solid #404040; }
+    border-left: 1px solid rgba(64, 64, 64, 0.5); }
     .lyric .lyric-container {
       margin-top: 80px;
       margin-left: 16.05442%; }
@@ -864,13 +914,16 @@ nav {
       margin-left: 16.05442%; } }
 
 .twitter-feed {
-  padding: 2rem 0; }
+  padding: 2rem 0;
+  width: 82.85714%;
+  max-width: 1218px;
+  margin: 0 auto; }
 
 .twitter-feed li {
-  border-top: 1px solid #404040;
+  border-top: 1px solid rgba(64, 64, 64, 0.5);
   padding: 30px 35px; }
   .twitter-feed li:last-of-type {
-    border-bottom: 1px solid #404040; }
+    border-bottom: 1px solid rgba(64, 64, 64, 0.5); }
   .twitter-feed li a {
     color: #fff; }
 
@@ -887,17 +940,30 @@ nav {
   font-size: 1.125rem;
   line-height: 1.75rem; }
 
+@media (min-width: 767px) {
+  .date {
+    display: inline-block;
+    width: 17.68707%; }
+  .tweet {
+    display: inline-block;
+    width: 82.31293%; } }
+
+.gallery {
+  padding-top: 80px;
+  padding-bottom: 80px; }
+  .gallery article {
+    width: 100%;
+    position: relative;
+    max-width: 1218px; }
+    @media (min-width: 640px) {
+      .gallery article {
+        width: 82.85714%;
+        margin: 0 auto; } }
+
 .ig-container {
   width: 100%;
   position: relative;
-  overflow: hidden;
-  padding-top: 80px;
-  padding-bottom: 80px; }
-  @media (min-width: 640px) {
-    .ig-container {
-      width: 82.85714%;
-      max-width: 1218px;
-      margin: 0 auto; } }
+  overflow: hidden; }
 
 .ig-next {
   display: block;
@@ -915,6 +981,32 @@ nav {
             transform: translateY(-50%); }
   .touch .ig-next {
     display: none; }
+
+.ig-prev {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 8;
+  padding: 0 20px; }
+  .ig-prev svg {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .touch .ig-prev {
+    display: none; }
+
+@media (min-width: 640px) {
+  .ig-prev {
+    display: block;
+    left: initial;
+    right: 100%; }
+  .ig-next {
+    right: initial;
+    left: 100%; } }
 
 #instafeed {
   text-align: left;
@@ -937,7 +1029,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 30px 25px 0;
   transition: .5s; }
   .no-touch .info {
     opacity: 0;
@@ -956,10 +1048,11 @@ nav {
 .caption {
   display: block;
   position: absolute;
-  left: 10px;
-  bottom: 20px;
+  left: 0;
+  bottom: 0;
   font-size: 1.125rem;
-  line-height: 1.45; }
+  line-height: 1.45;
+  padding: 0 25px 45px; }
 
 footer {
   width: 100%;
@@ -989,3 +1082,25 @@ footer {
   font-size: 1.125rem;
   letter-spacing: -0.04em;
   display: block; }
+
+@media (min-width: 767px) {
+  footer {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 12.5rem; }
+    footer > div {
+      display: inline-block;
+      vertical-align: middle; }
+  .footer-social {
+    width: 62.92517%;
+    padding-left: 8.5034%;
+    padding-bottom: 0; }
+    .footer-social ul {
+      text-align: left; }
+    .footer-social li {
+      padding-right: 60px; }
+  .copyright {
+    width: 37.07483%;
+    padding-right: 2rem; }
+    .copyright span {
+      display: inline; } }

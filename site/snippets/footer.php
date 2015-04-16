@@ -1,4 +1,4 @@
-<footer class="footer cf" role="contentinfo">
+<footer class="footer">
 	
 	<div class="footer-social">
 		<ul>
@@ -24,9 +24,7 @@
 				</a>
 			</li>
 		</ul>
-	</div>
-
-  <div class="copyright">
+	</div><div class="copyright">
   	<span>All content copyright</span>
     <span>Collapsing Scenery <?php echo date('Y'); ?></span>
   </div>

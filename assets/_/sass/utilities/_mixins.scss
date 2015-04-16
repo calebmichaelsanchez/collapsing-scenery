@@ -74,7 +74,8 @@
 $breakpoints: (
 
 	'x-small'	: ( min-width: 321px ),
-  'small'  	: ( min-width: 640px )
+  'small'  	: ( min-width: 640px ),
+  'medium'	: ( min-width: 767px)
 );
 
 @mixin respond-to($name) {

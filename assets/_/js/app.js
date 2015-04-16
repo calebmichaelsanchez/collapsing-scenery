@@ -98,7 +98,7 @@ var userFeed = new Instafeed({
 	template: '<li><img src="{{image}}" ><a target="_blank" href="{{link}}" class="info"><svg xmlns="http://www.w3.org/2000/svg" width="36.854" height="36.854" viewBox="0 0 36.854 36.854"><g fill="none" stroke="#ffffff" stroke-miterlimit="10"><path d="M2.767.5h33.587v33.585M36.354.5l-36 36"/></g></svg><span class="caption">{{caption}}</span></a></li>',
 	after: function() {
 		function checkWidth() {
-			var itemWidth = 300;
+			//var itemWidth = 300;
 			var containerChildLength = $('#instafeed li').length;
 			var containerMargin = 0;
 
@@ -178,6 +178,10 @@ var userFeed = new Instafeed({
 			$('#instafeed').swiperight(function() {
 					prevIgImage();
 			}); // end swipeleft
+			$('.ig-prev').click(function(e){
+					e.preventDefault();
+					prevIgImage();
+			});// end ig-next
 		}
 		checkWidth();
 		$(window).resize(checkWidth);
@@ -195,7 +199,10 @@ var twitterInit = function(){
 }
 twitterInit();
 
-
+var initSmoothScroll = function(){
+	$('nav a').smoothScroll();
+}
+initSmoothScroll();
 
 
 

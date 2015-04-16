@@ -4,8 +4,8 @@
 	h1 {
 		padding-top: 2rem;
 		padding-bottom: 2rem;
-		border-top: 1px $grey solid;
-		border-bottom: 1px $grey solid;
+		border-top: $border;
+		border-bottom: $border;
 	}
 }
 .lyric {
@@ -62,7 +62,7 @@
 		height: 100%;
 		min-height: none;
 		max-height: none;
-		border-left: 1px solid $grey;
+		border-left: $border;
 		.lyric-container {
 			margin-top: 80px;
 			margin-left: (236 / $maxWidth) * 100%;
