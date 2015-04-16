@@ -10,6 +10,9 @@
 	&:last-of-type {
 		border-bottom: $border;
 	}
+	a {
+		color: $grey;
+	}
 	a.read-more {
 		color: $white;
 	}
