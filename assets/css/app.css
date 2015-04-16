@@ -951,6 +951,10 @@ nav {
 @media (min-width: 767px) {
   .tweet-container > div {
     display: inline-block;
+    vertical-align: top; }
+  .date {
+    width: 21.34647%; }
+  .tweet {
     width: 78.65353%; } }
 
 .gallery {

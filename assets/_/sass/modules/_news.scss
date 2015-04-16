@@ -38,6 +38,12 @@
 @include respond-to('medium') {
 	.tweet-container > div {
 		display: inline-block;
+		vertical-align: top;
+	}
+	.date {
+		width: (260 / 1218) * 100%;
+	}
+	.tweet {
 		width: (958 / 1218) * 100%;
 	}
 } 
