@@ -5,6 +5,12 @@ footer {
 	color: $text-color;
 	background-color: $black;
 }
+.footer-inner {
+	width: (1218 / $maxWidth) * 100%;
+	max-width: 1218px;
+	margin: 0 auto;
+	text-align: left;
+}
 .footer-social {
 	width: 100%;
 	z-index: 10;
@@ -26,6 +32,9 @@ footer {
 		fill: $grey;
 	}
 }
+.copyright {
+	text-align: center;
+}
 .copyright span {
 	font-family: $ff-secondary;
 	font-size: em(18px);
@@ -39,14 +48,14 @@ footer {
 		padding-left: 0;
 		padding-right: 0;
 		padding-bottom: em(200px);
-		> div {
-			display: inline-block;
-			vertical-align: middle;
-		}
+	}
+	.footer-inner > div {
+		display: inline-block;
+		vertical-align: middle;
 	}
 	.footer-social {
-		width: (925 / $maxWidth) * 100%;
-		padding-left: (125 / $maxWidth) * 100%;
+		width: (750 / 1218) * 100%;
+		//padding-left: (125 / $maxWidth) * 100%;
 		padding-bottom: 0;
 		ul {
 			text-align: left;
@@ -56,8 +65,8 @@ footer {
 		}
 	}
 	.copyright {
-		width: (545 / $maxWidth) * 100%;
-		padding-right: 2rem;
+		width: (468 / 1218) * 100%;
+		//padding-right: 2rem;
 		span {
 			display: inline;
 		}

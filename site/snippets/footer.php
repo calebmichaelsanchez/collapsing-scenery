@@ -1,33 +1,35 @@
 <footer class="footer">
 	
-	<div class="footer-social">
-		<ul>
-			<li>
-				<a target="_blank" href="<?php echo $site->facebook()->html() ?>">
-					<?php include('assets/images/social/facebook.svg') ?>
-				</a>
-			</li><li>
-				<a target="_blank" href="<?php echo $site->twitter()->html() ?>">
-					<?php include('assets/images/social/twitter.svg') ?>
-				</a>
-			</li><li>
-				<a target="_blank" href="<?php echo $site->tumblr()->html() ?>">
-					<?php include('assets/images/social/tumblr.svg') ?>
-				</a>
-			</li><li>
-				<a target="_blank" href="<?php echo $site->instagram()->html() ?>">
-					<?php include('assets/images/social/instagram.svg') ?>
-				</a>
-			</li><li>
-				<a target="_blank" href="<?php echo $site->soundcloud()->html() ?>">
-					<?php include('assets/images/social/soundcloud.svg') ?>
-				</a>
-			</li>
-		</ul>
-	</div><div class="copyright">
-  	<span>All content copyright</span>
-    <span>Collapsing Scenery <?php echo date('Y'); ?></span>
-  </div>
+	<div class="footer-inner">
+		<div class="footer-social">
+			<ul>
+				<li>
+					<a target="_blank" href="<?php echo $site->facebook()->html() ?>">
+						<?php include('assets/images/social/facebook.svg') ?>
+					</a>
+				</li><li>
+					<a target="_blank" href="<?php echo $site->twitter()->html() ?>">
+						<?php include('assets/images/social/twitter.svg') ?>
+					</a>
+				</li><li>
+					<a target="_blank" href="<?php echo $site->tumblr()->html() ?>">
+						<?php include('assets/images/social/tumblr.svg') ?>
+					</a>
+				</li><li>
+					<a target="_blank" href="<?php echo $site->instagram()->html() ?>">
+						<?php include('assets/images/social/instagram.svg') ?>
+					</a>
+				</li><li>
+					<a target="_blank" href="<?php echo $site->soundcloud()->html() ?>">
+						<?php include('assets/images/social/soundcloud.svg') ?>
+					</a>
+				</li>
+			</ul>
+		</div><div class="copyright">
+		  	<span>All content copyright</span>
+		    <span>Collapsing Scenery <?php echo date('Y'); ?></span>
+		  </div>
+	</div>
 </footer>
 
 
