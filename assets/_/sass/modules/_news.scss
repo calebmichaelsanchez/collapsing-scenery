@@ -6,6 +6,7 @@
 	width: 100%;
 	border-top: $border;
 	padding: 30px 0;
+	color: $grey;
 	&:last-of-type {
 		border-bottom: $border;
 	}
@@ -34,10 +35,10 @@
 @include respond-to('medium') {
 	.date {
 		display: inline-block;
-		width: (260 / $maxWidth) * 100%;
+		width: (260 / 1218) * 100%;
 	}
 	.tweet {
 		display: inline-block;
-		width: (1210 / $maxWidth) * 100%;
+		width: (958 / 1218) * 100%;
 	}
 }
