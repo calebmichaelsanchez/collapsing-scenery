@@ -949,10 +949,7 @@ nav {
   line-height: 1.75rem; }
 
 @media (min-width: 767px) {
-  .date {
-    display: inline-block;
-    width: 21.34647%; }
-  .tweet {
+  .tweet-container > div {
     display: inline-block;
     width: 78.65353%; } }
 

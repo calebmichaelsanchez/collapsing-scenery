@@ -36,11 +36,7 @@
 	line-height: em(28px);
 }
 @include respond-to('medium') {
-	.date {
-		display: inline-block;
-		width: (260 / 1218) * 100%;
-	}
-	.tweet {
+	.tweet-container > div {
 		display: inline-block;
 		width: (958 / 1218) * 100%;
 	}
