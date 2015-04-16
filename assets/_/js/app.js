@@ -192,7 +192,7 @@ userFeed.run();
 var twitterInit = function(){
 	$('.twitter-feed').twittie({
 	    username: 'collapsingscene',
-	    dateFormat: '%m / %d / %y',
+	    dateFormat: '%m/%d/%y',
 	    template: '<div class="tweet-container"><div class="date">{{date}}</div><div class="tweet">{{tweet}}... <a href="{{link}}">Read More</a></div></div>',
 	    count: 3
 	});
