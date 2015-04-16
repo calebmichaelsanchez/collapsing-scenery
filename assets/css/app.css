@@ -924,7 +924,7 @@ nav {
   color: #404040; }
   .twitter-feed li:last-of-type {
     border-bottom: 1px solid rgba(64, 64, 64, 0.5); }
-  .twitter-feed li a {
+  .twitter-feed li a.read-more {
     color: #fff; }
 
 .tweet-container {
