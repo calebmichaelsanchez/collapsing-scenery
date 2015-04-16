@@ -36,12 +36,16 @@
 	line-height: em(28px);
 }
 @include respond-to('medium') {
+	.twitter-feed li {
+		padding: 80px 0;
+	}
 	.tweet-container > div {
 		display: inline-block;
 		vertical-align: top;
 	}
 	.date {
 		width: (260 / 1218) * 100%;
+		margin-bottom: 0;
 	}
 	.tweet {
 		width: (958 / 1218) * 100%;

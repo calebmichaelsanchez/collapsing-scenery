@@ -949,11 +949,14 @@ nav {
   line-height: 1.75rem; }
 
 @media (min-width: 767px) {
+  .twitter-feed li {
+    padding: 80px 0; }
   .tweet-container > div {
     display: inline-block;
     vertical-align: top; }
   .date {
-    width: 21.34647%; }
+    width: 21.34647%;
+    margin-bottom: 0; }
   .tweet {
     width: 78.65353%; } }
 
