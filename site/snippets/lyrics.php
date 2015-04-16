@@ -17,7 +17,9 @@
 				</div>
 			</div>
 			<div class="lyrics-aggregator">
-					<a href="#" class="down"><?php include('assets/images/arrow.svg') ?></a>
+					<a href="#" class="down">
+						<svg xmlns="http://www.w3.org/2000/svg" width="51.707" height="26.561" viewBox="0 0 51.707 26.561"><path stroke="#ffffff" stroke-miterlimit="10" d="M51.354.354l-25.5 25.5L.354.354" fill="none"/></svg>
+					</a>
 					<!-- <a href="#" class="up">up </a> -->
 			</div>
 		</div>

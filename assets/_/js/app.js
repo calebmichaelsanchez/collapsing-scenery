@@ -1,19 +1,19 @@
-if ($('html').hasClass('no-touch')) {
-	$(function() {
-	  var BV = new $.BigVideo({
-	  	useFlashForFirefox: false,
-	  	controls: false, 
-	  	container: $('.video-cont')
-	  });
-		BV.init();
-	  BV.show(
-	  	$(".video-cont").attr('data-video'),
-	  	{ambient:true}
-	  );
-	});
-} else {
-	console.log('Cannot view video on touch device!');
-}
+// if ($('html').hasClass('no-touch')) {
+// 	$(function() {
+// 	  var BV = new $.BigVideo({
+// 	  	useFlashForFirefox: false,
+// 	  	controls: false, 
+// 	  	container: $('.video-cont')
+// 	  });
+// 		BV.init();
+// 	  BV.show(
+// 	  	$(".video-cont").attr('data-video'),
+// 	  	{ambient:true}
+// 	  );
+// 	});
+// } else {
+// 	console.log('Cannot view video on touch device!');
+// }
 
 // Navigation Toggle
 var toggleNav = function() {
@@ -50,7 +50,7 @@ carouselInit();
 
 var classToFirstElement = function(parentElement, className) {
 	$(parentElement + ' > div' + ':first-child').addClass(className);
-	console.log(parentElement + ' ' + className);
+	//console.log(parentElement + ' ' + className);
 }
 classToFirstElement('.carousel-inner', 'active');
 
@@ -115,7 +115,7 @@ var userFeed = new Instafeed({
 			function nextIgImage() {
 				if (windowsize < 1470) {
 					if (containerMargin * -1 >= itemWidth * (containerChildLength - 1) ) {
-					console.log("Stop this bitch");
+					//console.log("Stop this bitch");
 					containerMargin = 0;
 
 					// set marginLeft for instafeed ul
@@ -134,7 +134,7 @@ var userFeed = new Instafeed({
 					} // end else
 				} else {
 						if (containerMargin * -1 >= itemWidth * (containerChildLength - 3) ) {
-						console.log("Stop this bitch");
+						//console.log("Stop this bitch");
 						containerMargin = 0;
 
 						// set marginLeft for instafeed ul
@@ -154,9 +154,9 @@ var userFeed = new Instafeed({
 				}
 			}
 			function prevIgImage() {
-				console.log(containerMargin);
+				//console.log(containerMargin);
 				if (containerMargin >= 0) {
-					console.log("Cannot go further left");
+					//console.log("Cannot go further left");
 				} 
 				else {
 					containerMargin += itemWidth;

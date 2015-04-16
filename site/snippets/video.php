@@ -16,19 +16,8 @@
 		    	</div>
 		    	<h6><?php echo $data->slider_video_one_title()->html() ?></h6>
 		    </div>
-		    <div class="item">
-		    	<div class="wrapper">
-		    		<iframe src="https://player.vimeo.com/video/124767935?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		    	</div>
-		    	<h6><?php echo $data->slider_video_two_title()->html() ?></h6>
-		    </div>
-		    <div class="item">
-		    	<div class="wrapper">
-		    		<iframe src="https://player.vimeo.com/video/124767935?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		    	</div>
-		    	<h6><?php echo $data->slider_video_three_title()->html() ?></h6>
-		    </div>
 		  </div>
+
 
 		  <!-- Controls -->
 		  <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
