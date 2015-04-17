@@ -5,8 +5,8 @@
 	<div class="main-social">
 		<ul>
 			<li>
-				<a target="_blank" href="<?php echo $site->facebook()->html() ?>">
-					<?php include('assets/images/social/facebook.svg') ?>
+				<a target="_blank" href="<?php echo $site->youtube()->html() ?>">
+					<?php include('assets/images/social/youtube.svg') ?>
 				</a>
 			</li>
 			<li>

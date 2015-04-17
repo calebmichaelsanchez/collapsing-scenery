@@ -779,6 +779,8 @@ nav {
 
 .main-logo {
   z-index: 5; }
+  .main-logo svg {
+    height: 165px; }
 
 .main-social {
   width: 100%;
@@ -795,7 +797,10 @@ nav {
       padding-right: 0; }
   .main-social a {
     display: block; }
+    .main-social a:hover svg {
+      opacity: .5; }
   .main-social svg {
+    transition: .5s;
     fill: #fff; }
 
 @media (min-width: 640px) {
@@ -870,8 +875,7 @@ nav {
     position: relative;
     width: 80%;
     max-width: 580px;
-    height: 85%;
-    max-height: 645px;
+    height: 79%;
     overflow: hidden;
     margin: 0 auto; }
   .lyric .lyrics-inner {
@@ -915,8 +919,7 @@ nav {
       margin-left: 16.05442%; } }
 
 .twitter-feed {
-  width: 100%;
-  padding: 2rem 0; }
+  width: 100%; }
 
 .twitter-feed li {
   width: 100%;
@@ -928,7 +931,10 @@ nav {
   .twitter-feed li a {
     color: #404040; }
   .twitter-feed li a.read-more {
-    color: #fff; }
+    color: #fff;
+    transition: 0.5s; }
+    .twitter-feed li a.read-more:hover {
+      text-decoration: underline; }
 
 .tweet-container {
   width: 82.85714%;
@@ -1068,7 +1074,7 @@ nav {
 
 footer {
   width: 100%;
-  padding: 0 35px 2rem;
+  padding: 2rem 35px 2rem;
   text-align: center;
   color: #404040;
   background-color: #000000; }
@@ -1092,7 +1098,10 @@ footer {
       padding-right: 0; }
   .footer-social a {
     display: block; }
+    .footer-social a:hover svg {
+      fill: #fff; }
   .footer-social svg {
+    transition: 0.5s;
     fill: #404040; }
 
 .copyright {

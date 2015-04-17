@@ -1,6 +1,5 @@
 .twitter-feed {
 	width: 100%;
-	padding: 2rem 0;
 }
 .twitter-feed li {
 	width: 100%;
@@ -15,6 +14,10 @@
 	}
 	a.read-more {
 		color: $white;
+		transition: 0.5s;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }
 .tweet-container {

@@ -18,6 +18,9 @@
 }
 .main-logo {
 	z-index: 5;
+	svg {
+		height: 165px;
+	}
 }
 .main-social {
 	width: 100%;
@@ -37,8 +40,12 @@
 	}
 	a {
 		display: block;
+		&:hover svg {
+			opacity: .5;
+		}
 	}
 	svg {
+		transition: .5s;
 		fill: $white;
 	}
 }

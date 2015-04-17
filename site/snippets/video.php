@@ -12,7 +12,7 @@
 		  <div class="carousel-inner">
 		    <div class="item">
 		    	<div class="wrapper">
-		    		<iframe src="https://player.vimeo.com/video/124767935?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		    		<iframe width="1280" height="720" src="https://www.youtube.com/embed/JkUKllsvb_U?rel=0&amp;controls=0&amp;showinfo=0&amp;VQ=HD720" frameborder="0" allowfullscreen></iframe>
 		    	</div>
 		    	<h6><?php echo $data->slider_video_one_title()->html() ?></h6>
 		    </div>

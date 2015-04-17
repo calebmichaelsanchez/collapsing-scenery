@@ -1,6 +1,6 @@
 footer {
 	width: 100%;
-	padding: 0 35px 2rem;
+	padding: 2rem 35px 2rem;
 	text-align: center;
 	color: $text-color;
 	background-color: $black;
@@ -27,8 +27,12 @@ footer {
 	}
 	a {
 		display: block;
+		&:hover svg {
+			fill: $white;
+		}
 	}
 	svg {
+		transition: 0.5s;
 		fill: $grey;
 	}
 }
