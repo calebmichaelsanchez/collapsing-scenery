@@ -93,9 +93,9 @@
 	.no-touch & {
 		opacity: 0;
 		background: rgba(#000, .75);
-		.no-touch #instafeed li:hover & {
-			opacity: 1;
-		}
+	}
+	.no-touch #instafeed li:hover & {
+		opacity: 1;
 	}
 	.touch & {
 		position: relative;

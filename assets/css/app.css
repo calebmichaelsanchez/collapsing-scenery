@@ -1068,8 +1068,8 @@ nav {
   .no-touch .info {
     opacity: 0;
     background: rgba(0, 0, 0, 0.75); }
-    .no-touch #instafeed li:hover .no-touch .info {
-      opacity: 1; }
+  .no-touch #instafeed li:hover .info {
+    opacity: 1; }
   .touch .info {
     position: relative;
     background: #222;
