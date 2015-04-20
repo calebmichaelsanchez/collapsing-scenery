@@ -332,7 +332,8 @@ html, body, ul {
   color: #fff; }
 
 body {
-  font-family: 'Cutive Mono', 'Courier', serif; }
+  font-family: 'Cutive Mono', 'Courier', serif;
+  min-height: 568px; }
 
 img {
   max-width: 100%;
