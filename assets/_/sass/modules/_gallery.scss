@@ -1,6 +1,15 @@
 .gallery {
 	padding-top: 80px;
 	padding-bottom: 80px;
+	.title {
+		width: 100%;
+		max-width: 1218px;
+		margin: 0 auto;
+		@include respond-to('small') {
+			width: (1218 / $maxWidth) * 100%;
+			margin: 0 auto;
+		}
+	}
 	article {
 		width: 100%;
 		position: relative;

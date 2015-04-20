@@ -49,20 +49,20 @@
 @include respond-to('small') {
 	.lyrics-container {
 		border-top: $border;
+		.title {
+			width: (385 / $maxWidth) * 100%;
+			float: left;
+			h1 {
+				text-align: center;
+				padding-top: 80px;
+				padding-left: 0;
+				border: none;
+			}
+		}
 	}
 	.lyrics-container, .lyrics-container article {
 		height: 100%;
 		min-height: 850px;
-	}
-	.title {
-		width: (385 / $maxWidth) * 100%;
-		float: left;
-		h1 {
-			text-align: center;
-			padding-top: 80px;
-			padding-left: 0;
-			border: none;
-		}
 	}
 	.lyric {
 		width: (1085 / $maxWidth) * 100%;

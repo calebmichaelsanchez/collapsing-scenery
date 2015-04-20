@@ -906,17 +906,17 @@ nav {
 @media (min-width: 640px) {
   .lyrics-container {
     border-top: 1px solid rgba(64, 64, 64, 0.5); }
+    .lyrics-container .title {
+      width: 26.19048%;
+      float: left; }
+      .lyrics-container .title h1 {
+        text-align: center;
+        padding-top: 80px;
+        padding-left: 0;
+        border: none; }
   .lyrics-container, .lyrics-container article {
     height: 100%;
     min-height: 850px; }
-  .title {
-    width: 26.19048%;
-    float: left; }
-    .title h1 {
-      text-align: center;
-      padding-top: 80px;
-      padding-left: 0;
-      border: none; }
   .lyric {
     width: 73.80952%;
     margin-left: auto;
@@ -984,6 +984,14 @@ nav {
 .gallery {
   padding-top: 80px;
   padding-bottom: 80px; }
+  .gallery .title {
+    width: 100%;
+    max-width: 1218px;
+    margin: 0 auto; }
+    @media (min-width: 640px) {
+      .gallery .title {
+        width: 82.85714%;
+        margin: 0 auto; } }
   .gallery article {
     width: 100%;
     position: relative;
