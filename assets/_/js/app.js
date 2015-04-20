@@ -17,6 +17,7 @@
 
 // Navigation Toggle
 var toggleNav = function() {
+	var winWidth = $(window).width();
 	var navToggle = $('.nav-toggle');
 	var nav = $('nav');
 	var navLinks = $('nav a');
@@ -24,14 +25,32 @@ var toggleNav = function() {
 	navToggle.click(function(e){
 		e.preventDefault();
 		$(this).toggleClass('open');
-		$(nav).toggleClass('open');
+		if ($(nav).hasClass('open')) {
+			$(nav).removeClass('open').addClass('close');
+			setTimeout(function(){
+				$(nav).removeClass('close');
+			}, 500);
+		} else {
+			$(nav).removeClass('close').addClass('open');
+		}
+		//$(nav).toggleClass('open');
 	});
 	navLinks.click(function(){
 		$(navToggle).toggleClass('open');
-		$(nav).toggleClass('open');
+		if ($(nav).hasClass('open')) {
+			$(nav).removeClass('open').addClass('close');
+			setTimeout(function(){
+				$(nav).removeClass('close');
+			}, 500);
+		}
 	})
+	if (winWidth >= 768) {
+		$(navToggle).removeClass('open');
+		$(nav).removeClass('open');
+	}
 }
 toggleNav();
+$(window).resize(toggleNav);
 
 // Bootstrap Carousel Init
 var carouselInit = function(){
@@ -64,8 +83,12 @@ var lyricsAggregator = function() {
 	var down = $('.down');
 	var counter = 0;
 
+	// click down arrow and add negative marginTop
+	// to the lyrics-inner element
 	$(down).click(function(e){
 		e.preventDefault();
+		// once the marginTop is equal to the height
+		// of its container set marginTop to 0
 		if (margin_top * -1 >= lyricsHeight - lyricContainerHeight) {
 			margin_top = 0;
 
@@ -95,7 +118,7 @@ var userFeed = new Instafeed({
 	accessToken: '1689788120.5f61481.1aad7798187f4f57b23c1b4c0a0aa757',
 	limit: 20,
 	resolution: 'standard_resolution',
-	template: '<li><img src="{{image}}" ><a target="_blank" href="{{link}}" class="info"><svg xmlns="http://www.w3.org/2000/svg" width="36.854" height="36.854" viewBox="0 0 36.854 36.854"><g fill="none" stroke="#ffffff" stroke-miterlimit="10"><path d="M2.767.5h33.587v33.585M36.354.5l-36 36"/></g></svg><span class="caption">{{caption}}</span></a></li>',
+	template: '<li><img src="{{image}}" ><a target="_blank" href="{{link}}" class="info"><span class="caption">{{caption}}</span><svg xmlns="http://www.w3.org/2000/svg" width="36.854" height="36.854" viewBox="0 0 36.854 36.854"><g fill="none" stroke="#ffffff" stroke-miterlimit="10"><path d="M2.767.5h33.587v33.585M36.354.5l-36 36"/></g></svg></a></li>',
 	after: function() {
 		function checkWidth() {
 			//var itemWidth = 300;

@@ -1,5 +1,10 @@
 .video-container {
+	padding: 0 0 2rem;
 	@include ghost;
+	h1 {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
 }
 
 @include respond-to('small') {
@@ -8,6 +13,8 @@
 		h1 {
 			width: (318 / $maxWidth) * 100%;
 			float: left;
+			padding-top: 0;
+			padding-bottom: 75px;
 			padding-left: 0;
 			text-align: center;
 		}

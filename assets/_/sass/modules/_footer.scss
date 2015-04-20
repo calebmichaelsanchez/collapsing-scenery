@@ -1,6 +1,6 @@
 footer {
 	width: 100%;
-	padding: 2rem 35px 2rem;
+	padding: 0 0 2rem;
 	text-align: center;
 	color: $text-color;
 	background-color: $black;
@@ -49,6 +49,7 @@ footer {
 
 @include respond-to('medium') {
 	footer {
+		padding-top: 4rem;
 		padding-left: 0;
 		padding-right: 0;
 		padding-bottom: em(200px);

@@ -22,7 +22,9 @@ nav {
 	color: $white; 
 	z-index: 9;
 	@include ghost;
-	transition: opacity 0.5s, visibility 0s 0.5s;
+	&.close {
+		transition: opacity 0.5s, visibility 0s 0.5s;
+	}
 	&.open {
 		position: fixed;
 		visibility: visible;
@@ -48,8 +50,8 @@ nav {
 		color: $white;
 	}
 }
-.no-touch {
-	@include respond-to('medium') {
+@include respond-to('medium') {
+	.no-touch {
 		.nav-toggle {
 			display: none;
 		}
@@ -63,6 +65,7 @@ nav {
 			top: initial;
 			bottom: 0;
 			height: auto;
+			transition: none;
 			&:before {
 				display: none;
 			}

@@ -665,8 +665,7 @@ nav {
   background: rgba(0, 0, 0, 0.85);
   color: #fff;
   z-index: 9;
-  text-align: center;
-  transition: opacity 0.5s, visibility 0s 0.5s; }
+  text-align: center; }
   nav:before {
     content: '';
     display: inline-block;
@@ -679,6 +678,8 @@ nav {
     vertical-align: middle;
     width: 98%;
     z-index: 5; }
+  nav.close {
+    transition: opacity 0.5s, visibility 0s 0.5s; }
   nav.open {
     position: fixed;
     visibility: visible;
@@ -711,7 +712,8 @@ nav {
     position: fixed;
     top: initial;
     bottom: 0;
-    height: auto; }
+    height: auto;
+    transition: none; }
     .no-touch nav:before {
       display: none; }
   .no-touch .nav-ul {
@@ -817,6 +819,7 @@ nav {
       padding: 0 0 45px; } }
 
 .video-container {
+  padding: 0 0 2rem;
   text-align: center; }
   .video-container:before {
     content: '';
@@ -830,6 +833,9 @@ nav {
     vertical-align: middle;
     width: 98%;
     z-index: 5; }
+  .video-container h1 {
+    padding-top: 2rem;
+    padding-bottom: 2rem; }
 
 @media (min-width: 640px) {
   .video-container {
@@ -837,6 +843,8 @@ nav {
     .video-container h1 {
       width: 21.63265%;
       float: left;
+      padding-top: 0;
+      padding-bottom: 75px;
       padding-left: 0;
       text-align: center; }
   .carousel {
@@ -889,8 +897,15 @@ nav {
     width: 80%;
     padding: 1rem 0;
     margin: 0 auto; }
+    .lyric .lyrics-aggregator a {
+      display: block; }
+    .lyric .lyrics-aggregator .end svg {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
 
 @media (min-width: 640px) {
+  .lyrics-container {
+    border-top: 1px solid rgba(64, 64, 64, 0.5); }
   .lyrics-container, .lyrics-container article {
     height: 100%;
     min-height: 850px; }
@@ -1018,6 +1033,8 @@ nav {
     display: none; }
 
 @media (min-width: 640px) {
+  .gallery h1 {
+    padding-left: 0; }
   .ig-prev {
     display: block;
     left: initial;
@@ -1047,12 +1064,11 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 30px 25px 0;
   transition: .5s; }
   .no-touch .info {
     opacity: 0;
     background: rgba(0, 0, 0, 0.75); }
-    .no-touch .info:hover {
+    .no-touch #instafeed li:hover .no-touch .info {
       opacity: 1; }
   .touch .info {
     position: relative;
@@ -1061,20 +1077,26 @@ nav {
     min-height: 200px; }
   .info svg {
     display: block;
-    margin-left: auto; }
+    margin-left: auto;
+    position: absolute;
+    bottom: 45px;
+    right: 45px; }
+    .touch .info svg {
+      bottom: 20px;
+      right: 20px; }
 
 .caption {
   display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  position: relative;
   font-size: 1.125rem;
   line-height: 1.45;
-  padding: 0 25px 45px; }
+  padding: 45px 25px 75px; }
+  .touch .caption {
+    padding: 20px 20px 75px; }
 
 footer {
   width: 100%;
-  padding: 2rem 35px 2rem;
+  padding: 0 0 2rem;
   text-align: center;
   color: #404040;
   background-color: #000000; }
@@ -1115,6 +1137,7 @@ footer {
 
 @media (min-width: 767px) {
   footer {
+    padding-top: 4rem;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 12.5rem; }
