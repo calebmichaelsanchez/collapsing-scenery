@@ -1,4 +1,4 @@
-<div id="main" class="video-cont" data-videosssssss="/assets/video/cs-metacops.mp4">
+<div id="main" class="video-cont" data-video="http://player.vimeo.com/external/125369031.hd.mp4?s=c04fb4bed02ff3e74f4d2ba7e8da6ae5&profile_id=113">
 	<div class="main-logo ghosted">
 		<?php include('assets/images/main/logo.svg') ?>
 	</div>

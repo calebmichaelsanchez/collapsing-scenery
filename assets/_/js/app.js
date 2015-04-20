@@ -1,19 +1,19 @@
-// if ($('html').hasClass('no-touch')) {
-// 	$(function() {
-// 	  var BV = new $.BigVideo({
-// 	  	useFlashForFirefox: false,
-// 	  	controls: false, 
-// 	  	container: $('.video-cont')
-// 	  });
-// 		BV.init();
-// 	  BV.show(
-// 	  	$(".video-cont").attr('data-video'),
-// 	  	{ambient:true}
-// 	  );
-// 	});
-// } else {
-// 	console.log('Cannot view video on touch device!');
-// }
+if ($('html').hasClass('no-touch')) {
+	$(function() {
+	  var BV = new $.BigVideo({
+	  	useFlashForFirefox: false,
+	  	controls: false, 
+	  	container: $('.video-cont')
+	  });
+		BV.init();
+	  BV.show(
+	  	$(".video-cont").attr('data-video'),
+	  	{ambient:true}
+	  );
+	});
+} else {
+	console.log('Cannot view video on touch device!');
+}
 
 // Navigation Toggle
 var toggleNav = function() {
