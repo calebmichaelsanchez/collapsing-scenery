@@ -1075,6 +1075,7 @@ nav {
   height: 100%;
   transition: .5s; }
   .no-touch .info {
+    overflow: hidden;
     opacity: 0;
     background: rgba(0, 0, 0, 0.75); }
   .no-touch #instafeed li:hover .info {
