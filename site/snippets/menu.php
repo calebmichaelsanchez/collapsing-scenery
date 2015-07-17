@@ -8,5 +8,8 @@
       <a <?php e($p->isOpen(), ' class="active"') ?> href="#<?php echo strtolower($p->title()) ?>"><?php echo $p->title()->html() ?></a>
     </li>
     <?php endforeach ?>
+    <li>
+      <a href="http://shop.collapsingscenery.com" target="_blank">Shop</a>
+    </li>
   </ul>
 </nav>

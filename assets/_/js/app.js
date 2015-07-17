@@ -16,6 +16,23 @@ if ($('html').hasClass('no-touch')) {
 }
 
 // Navigation Toggle
+// var Nav = {
+// 	winWidth: $(window).width(),
+// 	navToggle: $('.nav-toggle');
+// 	toggle: function(e) {
+// 		e.preventDefault();
+// 		this.navToggle.toggleClass('open');
+// 		if ($(nav).hasClass('open')) {
+// 			$(nav).removeClass('open').addClass('close');
+// 			setTimeout(function(){
+// 				$(nav).removeClass('close');
+// 			}, 500);
+// 		} else {
+// 			$(nav).removeClass('close').addClass('open');
+// 		}
+// 		//$(nav).toggleClass('open');
+// 	}
+// }
 var toggleNav = function() {
 	var winWidth = $(window).width();
 	var navToggle = $('.nav-toggle');
@@ -25,32 +42,33 @@ var toggleNav = function() {
 	navToggle.click(function(e){
 		e.preventDefault();
 		$(this).toggleClass('open');
-		if ($(nav).hasClass('open')) {
-			$(nav).removeClass('open').addClass('close');
-			setTimeout(function(){
-				$(nav).removeClass('close');
-			}, 500);
-		} else {
-			$(nav).removeClass('close').addClass('open');
-		}
-		//$(nav).toggleClass('open');
+		$(nav).toggleClass('open');
+		// if ($(nav).hasClass('open')) {
+		// 	$(nav).removeClass('open').addClass('close');
+		// 	// setTimeout(function(){
+		// 	// 	$(nav).removeClass('close');
+		// 	// }, 500);
+		// } else {
+		// 	$(nav).removeClass('close').addClass('open');
+		// }
 	});
 	navLinks.click(function(){
 		$(navToggle).toggleClass('open');
-		if ($(nav).hasClass('open')) {
-			$(nav).removeClass('open').addClass('close');
-			setTimeout(function(){
-				$(nav).removeClass('close');
-			}, 500);
-		}
+		$(nav).toggleClass('open');
 	})
-	if (winWidth >= 768) {
-		$(navToggle).removeClass('open');
-		$(nav).removeClass('open');
-	}
 }
 toggleNav();
-$(window).resize(toggleNav);
+$(window).resize(function(){
+	var winWidth = $(window).width();
+	var navToggle = $('.nav-toggle');
+	var nav = $('nav');
+	var navLinks = $('nav a');
+
+	if (winWidth >= 768 && $(nav).hasClass('open')) {
+		$(nav).removeClass('open');
+		$(navToggle).removeClass('open');
+	}
+});
 
 // Bootstrap Carousel Init
 var carouselInit = function(){
