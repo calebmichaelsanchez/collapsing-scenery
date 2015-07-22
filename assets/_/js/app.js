@@ -2,7 +2,7 @@ if ($('html').hasClass('no-touch')) {
 	$(function() {
 	  var BV = new $.BigVideo({
 	  	useFlashForFirefox: false,
-	  	controls: false, 
+	  	controls: false,
 	  	container: $('.video-cont')
 	  });
 		BV.init();
@@ -72,15 +72,15 @@ $(window).resize(function(){
 
 // Bootstrap Carousel Init
 var carouselInit = function(){
-	
+
 	$('.carousel').carousel({interval: 0});
 
 	// Carousel touch support
-	$("#carousel").swiperight(function() {  
-	  $(this).carousel('prev');  
-	});  
-	$("#carousel").swipeleft(function() {  
-	  $(this).carousel('next');  
+	$("#carousel").swiperight(function() {
+	  $(this).carousel('prev');
+	});
+	$("#carousel").swipeleft(function() {
+	  $(this).carousel('next');
 	});
 };
 carouselInit();
@@ -116,7 +116,7 @@ var lyricsAggregator = function() {
 
 		 } else {
 			margin_top -= lyricContainerHeight;
-			
+
 			lyricsInner.css({
 				marginTop: margin_top + 'px'
 			});
@@ -166,7 +166,7 @@ var userFeed = new Instafeed({
 
 				} else {
 					containerMargin -= itemWidth;
-					
+
 					// set marginLeft for instafeed ul
 					$('#instafeed').css({
 						marginLeft: containerMargin + 'px'
@@ -185,7 +185,7 @@ var userFeed = new Instafeed({
 
 					} else {
 						containerMargin -= itemWidth;
-						
+
 						// set marginLeft for instafeed ul
 						$('#instafeed').css({
 							marginLeft: containerMargin + 'px'
@@ -198,10 +198,10 @@ var userFeed = new Instafeed({
 				//console.log(containerMargin);
 				if (containerMargin >= 0) {
 					//console.log("Cannot go further left");
-				} 
+				}
 				else {
 					containerMargin += itemWidth;
-					
+
 					// set marginLeft for instafeed ul
 					$('#instafeed').css({
 						marginLeft: containerMargin + 'px'
