@@ -17,14 +17,20 @@
 	overflow: hidden;
 	background: url('../images/main/bg.jpg') center center no-repeat;
 	background-size: cover;
-	
+
 	.lyric-container {
-		position: relative;
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 80%;
 		max-width: 580px;
 		height: 79%;
 		overflow: hidden;
 		margin: 0 auto;
+		opacity: 0;
+		&.active {
+			opacity: 1;
+		}
 	}
 	.lyrics-inner {
 		position: absolute;
@@ -34,14 +40,17 @@
 		transition: .4s;
 	}
 	.lyrics-aggregator {
-		position: relative;
+		position: absolute;
+		bottom: 0;
+		left: 0;
 		width: 80%;
 		padding: 1rem 0;
 		margin: 0 auto;
 		a {
-			display: block;
+			display: inline-block;
+			margin-right: 10px;
 		}
-		.end svg {
+		.up svg {
 			transform: rotate(180deg);
 		}
 	}

@@ -124,8 +124,52 @@ var lyricsAggregator = function() {
 		}
 	});
 }
-lyricsAggregator();
-$(window).resize(lyricsAggregator);
+//lyricsAggregator();
+//$(window).resize(lyricsAggregator);
+
+var Lyric = {
+	lyricInner: document.getElementById('lyrics-inner'),
+	lyricHeight: parseInt(document.getElementById('lyrics-inner').offsetHeight),
+	down: document.getElementById('down'),
+	up: document.getElementById('up'),
+	margin: 0,
+	count: 0,
+
+	clickDown: function(e){
+		e.preventDefault();
+		Lyric.count++
+		if (Lyric.count < 4) {
+			Lyric.margin -= (Lyric.lyricHeight / 4);
+			Lyric.lyricInner.style.marginTop = Lyric.margin + 'px';
+			//console.log(Lyric.lyricInner.style.marginTop);
+		}
+		else {
+			Lyric.margin = 0;
+			Lyric.count = 0;
+			Lyric.lyricInner.style.marginTop = Lyric.margin + 'px';
+		}
+		//console.log(Lyric.count);
+		return Lyric.count;
+	},
+	clickUp: function(e){
+		e.preventDefault();
+		Lyric.count--
+		if (Lyric.count <= 0) {
+			Lyric.margin = 0;
+			Lyric.count = 0;
+			Lyric.lyricInner.style.marginTop = Lyric.margin + 'px';
+		}
+		else {
+			Lyric.margin += (Lyric.lyricHeight / 4);
+			Lyric.lyricInner.style.marginTop = Lyric.margin + 'px';
+		}
+		//console.log(Lyric.count);
+		return Lyric.count;
+	}
+}
+
+Lyric.down.onclick = Lyric.clickDown;
+Lyric.up.onclick = Lyric.clickUp;
 
 // Instagram Function using instafeed.js
 
