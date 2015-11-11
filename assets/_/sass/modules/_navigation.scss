@@ -19,17 +19,15 @@ nav {
 	top: 0;
 	left: 0;
 	background: rgba($black, .85);
-	color: $white; 
+	color: $white;
 	z-index: 9;
+	transition: opacity 0.5s, visibility 0s 0.5s;
 	@include ghost;
-	&.close {
-		transition: opacity 0.5s, visibility 0s 0.5s;
-	}
 	&.open {
 		position: fixed;
 		visibility: visible;
 		opacity: 1;
-		transition: opacity 0.5s;
+		transition: opacity 0.5s, visibility 0s 0s;
 	}
 }
 .nav-ul {

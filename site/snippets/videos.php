@@ -3,19 +3,18 @@
 		<h1><?php echo $data->title()->html() ?></h1>
 		<!-- Carousel -->
 		<div id="carousel" class="carousel slide" data-ride="carousel">
-			<?php 
-				// $slider_video_one 	= $data->slider_video_one();
-				// $slider_video_two 	= $data->slider_video_two();
-				// $slider_video_three = $data->slider_video_three();
-			?>
+
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner">
+		  	<?php foreach($data->children()->visible() as $video): ?>
 		    <div class="item">
 		    	<div class="wrapper">
-		    		<iframe src="https://player.vimeo.com/video/125369031?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		    		<iframe src="https://player.vimeo.com/video/<?php echo $video->VimeoVideoNumber() ?>?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		    	</div>
-		    	<h6><?php echo $data->slider_video_one_title()->html() ?></h6>
+		    	<h6><?php echo $video->title()->html() ?></h6>
 		    </div>
+		  <?php endforeach ?>
+
 		  </div>
 
 
@@ -31,7 +30,6 @@
 		  <ol class="carousel-indicators">
 		    <li data-target="#carousel" data-slide-to="0" class="active"></li>
 		    <li data-target="#carousel" data-slide-to="1"></li>
-		    <li data-target="#carousel" data-slide-to="2"></li>
 		  </ol>
 
 		</div>

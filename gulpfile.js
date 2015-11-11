@@ -45,7 +45,8 @@ var onError = function (err) {
 // Browser Sync
 gulp.task('browser-sync', function() {
     browserSync({
-    	proxy: "http://collapsingscenery.dev/"
+    	proxy: "http://collapsingscenery.dev/",
+    	port: 3030
     });
 });
 

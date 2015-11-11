@@ -1,5 +1,6 @@
 .DS_Store
-/site/accounts
-/assets/avatars
-/thumbs/*
-/node_modules
+site/accounts
+assets/avatars
+thumbs/*
+node_modules
+assets/.sass-cache
