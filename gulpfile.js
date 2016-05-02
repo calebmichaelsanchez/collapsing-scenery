@@ -5,7 +5,7 @@
 // Gulp
 var gulp 				= require("gulp");
 
-// Error reporting 
+// Error reporting
 var beep 				= require('beepbeep');
 var gutil 			= require('gulp-util');
 var plumber 		= require('gulp-plumber');
@@ -19,7 +19,9 @@ var sass 				= require("gulp-sass");
 var sourcemaps 	= require('gulp-sourcemaps');
 var autoprefix	= require("gulp-autoprefixer");
 
-// Browser Sync 
+// PHP
+var php 				= require("gulp-connect-php");
+// Browser Sync
 var browserSync = require("browser-sync");
 var reload 			= browserSync.reload;
 
@@ -42,11 +44,19 @@ var onError = function (err) {
 // Gulp Tasks
 // ====================================================
 
+
+// PHP server setup
+gulp.task('php', function() {
+    php.server({ base: './', port: 8010, keepalive: true});
+});
+
 // Browser Sync
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync',['php'], function() {
     browserSync({
-    	proxy: "http://collapsingscenery.dev/",
-    	port: 3030
+    	proxy: "127.0.0.1:8010",
+    	port: 8080,
+    	open: true,
+    	notify: false
     });
 });
 

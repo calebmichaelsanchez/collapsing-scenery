@@ -1,7 +1,7 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Videos
-pages: false
+pages: true
 fields:
   title:
     label: Title
