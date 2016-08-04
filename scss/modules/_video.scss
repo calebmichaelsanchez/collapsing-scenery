@@ -1,0 +1,39 @@
+.video-container {
+	padding: 0 0 2rem;
+	@include ghost;
+	h1 {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+}
+
+@include respond-to('small') {
+	.video-container {
+		padding: 6rem 0;
+		h1 {
+			width: (318 / $maxWidth) * 100%;
+			float: left;
+			padding-top: 0;
+			padding-bottom: 75px;
+			padding-left: 0;
+			text-align: center;
+		}
+	}
+	.carousel {
+		width: (1030 / $maxWidth) * 100%;
+		margin-left: auto;
+		margin-right: (122 / $maxWidth) * 100%;
+		h6 {
+			margin-left: 0;
+			margin-top: 60px;
+		}
+		&-indicators {
+			padding: 0;
+			margin-left: 0;
+			margin-bottom: 0;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+	}
+}

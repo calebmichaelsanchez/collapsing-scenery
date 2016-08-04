@@ -1,0 +1,138 @@
+.gallery {
+	display: none;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	.title {
+		width: 100%;
+		max-width: 1218px;
+		margin: 0 auto;
+		@include respond-to('small') {
+			width: (1218 / $maxWidth) * 100%;
+			margin: 0 auto;
+		}
+	}
+	article {
+		width: 100%;
+		position: relative;
+		max-width: 1218px;
+		@include respond-to('small') {
+			width: (1218 / $maxWidth) * 100%;
+			margin: 0 auto;
+		}
+	}
+}
+.ig-container {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.ig-next {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	background: rgba($black, .75);
+	z-index: 8;
+	padding: 0 20px;
+	svg {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.touch & {
+		display: none;
+	}
+}
+.ig-prev {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: rgba($black, .75);
+	z-index: 8;
+	padding: 0 20px;
+	svg {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.touch & {
+		display: none;
+	}
+}
+@include respond-to('small') {
+	.gallery h1 {
+		padding-left: 0;
+	}
+	.ig-prev {
+		display: block;
+		left: initial;
+		right: 100%;
+	}
+	.ig-next {
+		right: initial;
+		left: 100%;
+	}
+}
+#instafeed {
+	text-align: left;
+	width: 430px;
+	margin-left: 0;
+	transition: margin .6s ease;
+	@extend %clearfix;
+	li {
+		position: relative;
+		width: 300px;
+		padding: 0 2px 0 0;
+		float: left;
+		@include respond-to('small') {
+			width: 406px;
+		}
+	}
+}
+.info {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: .5s;
+	.no-touch & {
+		overflow: hidden;
+		opacity: 0;
+		background: rgba(#000, .75);
+	}
+	.no-touch #instafeed li:hover & {
+		opacity: 1;
+	}
+	.touch & {
+		position: relative;
+		background: #222;
+		height: auto;
+		min-height: 200px;
+	}
+	svg {
+		display: block;
+		margin-left: auto;
+		position: absolute;
+		bottom: 45px;
+		right: 45px;
+		.touch & {
+			bottom: 20px;
+			right: 20px;
+		}
+	}
+}
+.caption {
+	display: block;
+	position: relative;
+	font-size: em(18px);
+	line-height: 1.45;
+	padding: 45px 25px 75px;
+	.touch & {
+		padding: 20px 20px 75px;
+	}
+}
